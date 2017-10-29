@@ -1,6 +1,10 @@
 # calliope-mini
 ## Description
 My code for the Calliope Mini
+## Table of Software
+### SimpleOrakel
+This is a little program, which randomly chooses between Yes and No.
+You just have to press button A and it will search a solution :)
 ## Usage
 First clone my CalliopeMini-Repository to your machine.
 ### Source
