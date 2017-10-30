@@ -20,6 +20,7 @@ int main() {
         }
         uBit.sleep(3000);
         uBit.display.clear();
+        uBit.sleep(1000);
 
     }
     
