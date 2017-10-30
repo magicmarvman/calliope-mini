@@ -205,7 +205,7 @@ void showMnet() {
 
 void blinkImage(MicroBitImage img, int times, int delay) {
 	for(a = 0; a < times; a = a + 1) {
-		show_image(img);
+		showImage(img);
 		uBit.sleep(delay);
 	}
 }
