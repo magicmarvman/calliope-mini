@@ -1,8 +1,8 @@
 {
-  "name": "calliope-playground",
+  "name": "magicmarvman-calliope",
   "version": "1.0.1",
   "description": "Examples for Calliope-MINI functions.",
-  "license": "Apache 2.0",
+  "license": "MIT",
   "dependencies": {
     "microbit": "calliope-mini/microbit#v2.0.0-rc7-calliope-1.0.1"
   },
