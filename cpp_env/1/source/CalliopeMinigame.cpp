@@ -207,6 +207,8 @@ void blinkImage(MicroBitImage img, int times, int delay) {
 	for(int a = 0; a < times; a = a + 1) {
 		showImage(img);
 		uBit.sleep(delay);
+		uBit.display.clear();
+		uBit.sleep(delay);
 	}
 }
 
@@ -242,16 +244,7 @@ void mainGame() {
 
 	leaveBeep();
 	
-	uBit.display.print(Tick);
-	uBit.sleep(500);
-	uBit.display.print(Tick);
-	uBit.sleep(500);
-	uBit.display.print(Tick);
-	uBit.sleep(500);
-	uBit.display.print(Tick);
-	uBit.sleep(500);
-	uBit.display.print(Tick);
-	uBit.display.clear();
+	blinkImage(Tick, 4, 500);
 
 	while(! uBit.buttonB.isPressed()) {
 		showImage(ArrowRight);
@@ -259,16 +252,7 @@ void mainGame() {
 
 	leaveBeep();
 
-	uBit.display.print(Tick);
-	uBit.sleep(500);
-	uBit.display.print(Tick);
-	uBit.sleep(500);
-	uBit.display.print(Tick);
-	uBit.sleep(500);
-	uBit.display.print(Tick);
-	uBit.sleep(500);
-	uBit.display.print(Tick);
-	uBit.display.clear();
+	blinkImage(Tick, 4, 500);
 
 
 
