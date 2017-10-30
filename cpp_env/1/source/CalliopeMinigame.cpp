@@ -199,6 +199,7 @@ void showMnet() {
 	const MicroBitImage S_Mnet(5, 5, s_mnet);
 
 	showImage(M_Mnet);
+	uBit.sleep(1100);
 	showImage(S_Mnet);
 }
 
@@ -207,13 +208,19 @@ void mainGame() {
 	dadadaSound();
 	startSound();
 	showImage(Smiley);
+	uBit.sleep(1500);
 	uBit.display.clear();
 
 	uBit.display.print(Tick);
+	uBit.sleep(500);
 	uBit.display.clear();
+	uBit.sleep(500);
 	uBit.display.print(Tick);
+	uBit.sleep(500);
 	uBit.display.clear();
+	uBit.sleep(500);
 	uBit.display.print(Tick);
+	uBit.sleep(500);
 	uBit.display.clear();
 
 	uBit.sleep(1000);
