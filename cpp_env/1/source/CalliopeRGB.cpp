@@ -4,9 +4,11 @@
 #include "nrf_gpio.h"
 
 
-MicroBit uBit;
+
 
 #ifdef CALLIOPE_DEMO_RGB
+
+MicroBit uBit;
 
 int main() {
     uBit.init();

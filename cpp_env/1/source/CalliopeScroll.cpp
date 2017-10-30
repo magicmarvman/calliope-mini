@@ -4,9 +4,11 @@
 #include "nrf_gpio.h"
 
 
-MicroBit uBit;
+
 
 #ifdef CALLIOPE_SCROLL_TEST
+
+MicroBit uBit;
 
 int main() {
     uBit.init();
