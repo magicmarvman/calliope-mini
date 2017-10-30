@@ -220,17 +220,7 @@ void mainGame() {
 	uBit.sleep(1500);
 	uBit.display.clear();
 
-	uBit.display.print(Tick);
-	uBit.sleep(500);
-	uBit.display.clear();
-	uBit.sleep(500);
-	uBit.display.print(Tick);
-	uBit.sleep(500);
-	uBit.display.clear();
-	uBit.sleep(500);
-	uBit.display.print(Tick);
-	uBit.sleep(500);
-	uBit.display.clear();
+	blinkImage(Tick, 3, 500);
 
 	uBit.sleep(1000);
 	uBit.display.scroll("READY? STEADY? GO!");
@@ -240,6 +230,7 @@ void mainGame() {
 
 	while(! uBit.buttonA.isPressed()) {
 		showImage(ArrowLeft);
+		//blinkImage(ArrowLeft, 1, 500);
 	}
 
 	leaveBeep();
