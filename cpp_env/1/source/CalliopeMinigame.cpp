@@ -203,6 +203,13 @@ void showMnet() {
 	showImage(S_Mnet);
 }
 
+void blinkImage(MicroBitImage img, int times, int delay) {
+	for(a = 0; a < times; a = a + 1) {
+		show_image(img);
+		uBit.sleep(delay);
+	}
+}
+
 void mainGame() {
 	showMnet();
 	dadadaSound();
@@ -226,6 +233,20 @@ void mainGame() {
 	uBit.sleep(1000);
 	uBit.display.scroll("READY? STEADY? GO!");
 	startSound();
+
+	// done with intro
+
+	while(! uBit.buttonA.isPressed()) {
+		blinkImage(ArrowLeft, 1, 500);
+	}
+
+	leaveBeep();
+	blinkImage(Tick, 4, 500);
+
+
+
+
+
 }
 
 int main() {
