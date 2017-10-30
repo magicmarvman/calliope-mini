@@ -112,6 +112,21 @@ const uint8_t wave[7 * 5] = {0, 0, 0, 0, 0, 0, 0,
                              0, 0, 0, 0, 0, 0, 0
 };
 
+const uint8_t m_mnet[25] = {1, 0, 0, 0, 1,
+	     					1, 1, 0, 1, 1,
+	     					1, 0, 1, 0, 1,
+	     					1, 0, 0, 0, 1,
+	     					1, 0, 0, 0, 1
+
+};
+
+const uint_t s_mnet[25] = {0, 1, 1, 1, 0,
+						   1, 0, 0, 0, 0,
+						   0, 1, 1, 0, 0,
+						   0, 0, 0, 1, 0,
+						   0, 1, 1, 1, 0,
+
+};
 
 
 const MicroBitImage Full(5, 5, full);
@@ -131,6 +146,8 @@ const MicroBitImage Scissors(5, 5, scissors);
 const MicroBitImage Well(5, 5, well);
 const MicroBitImage Flash(5, 5, flash);
 const MicroBitImage Wave(7, 5, wave);
+const MicroBitImage M_Mnet(5, 5, m_mnet);
+const MicroBitImage S_Mnet(5, 5, s_mnet);
 
 // end images / copyright (C) by calliope
 
@@ -176,10 +193,32 @@ void showImage(MicroBitImage img) {
 	uBit.display.print(img);
 }
 
-int main() {
+void showMnet() {
+	showImage(M_mnet);
+	showImage(S_mnet);
+}
+
+void mainGame() {
+	showMnet();
+	dadadaSound();
 	startSound();
 	showImage(Smiley);
-	dadadaSound();
+	uBit.display.clear();
+
+	uBit.display.print(Tick);
+	uBit.display.clear();
+	uBit.display.print(Tick);
+	uBit.display.clear();
+	uBit.display.print(Tick);
+	uBit.display.clear();
+
+	uBit.sleep(1000);
+	uBit.display.scroll("READY? STEADY? GO!");
+	startSound();
+}
+
+int main() {
+	mainGame();
 }
 
 #endif
