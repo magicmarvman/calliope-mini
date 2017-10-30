@@ -241,7 +241,36 @@ void mainGame() {
 	}
 
 	leaveBeep();
-	blinkImage(Tick, 4, 500);
+	
+	uBit.display.print(Tick);
+	uBit.sleep(500);
+	uBit.display.print(Tick);
+	uBit.sleep(500);
+	uBit.display.print(Tick);
+	uBit.sleep(500);
+	uBit.display.print(Tick);
+	uBit.sleep(500);
+	uBit.display.print(Tick);
+	uBit.display.clear();
+
+	while(! uBit.buttonB.isPressed()) {
+		showImage(ArrowRight);
+	}
+
+	leaveBeep();
+
+	uBit.display.print(Tick);
+	uBit.sleep(500);
+	uBit.display.print(Tick);
+	uBit.sleep(500);
+	uBit.display.print(Tick);
+	uBit.sleep(500);
+	uBit.display.print(Tick);
+	uBit.sleep(500);
+	uBit.display.print(Tick);
+	uBit.display.clear();
+
+
 
 
 
