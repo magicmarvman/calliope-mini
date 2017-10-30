@@ -7,19 +7,7 @@
 
 MicroBit uBit;
 
-void callibrate_compass(c) {
 
-    uBit.display.clear();
-
-    c.calibrate();
-    while(c.isCalibrating()) {
-        uBit.soundmotor.soundOn(392);
-        fiber_sleep(125);
-        uBit.soundmotor.soundOff();
-    }
-    
-    uBit.display.clear();
-}
 
 int main() {
     MicroBitI2C i2c(I2C_SDA0, I2C_SCL0); 
