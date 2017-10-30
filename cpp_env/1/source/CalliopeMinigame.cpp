@@ -237,7 +237,8 @@ void mainGame() {
 	// done with intro
 
 	while(! uBit.buttonA.isPressed()) {
-		blinkImage(ArrowLeft, 1, 500);
+		showImage(ArrowLeft);
+		fiber_sleep(500);
 	}
 
 	leaveBeep();
