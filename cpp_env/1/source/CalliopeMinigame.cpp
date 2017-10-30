@@ -178,7 +178,7 @@ void showImage(MicroBitImage img) {
 
 int main() {
 	startSound();
-	showImage(smiley);
+	showImage(Smiley);
 	dadadaSound();
 }
 
