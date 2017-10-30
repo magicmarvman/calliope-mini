@@ -238,7 +238,6 @@ void mainGame() {
 
 	while(! uBit.buttonA.isPressed()) {
 		showImage(ArrowLeft);
-		fiber_sleep(500);
 	}
 
 	leaveBeep();
