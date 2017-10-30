@@ -112,21 +112,7 @@ const uint8_t wave[7 * 5] = {0, 0, 0, 0, 0, 0, 0,
                              0, 0, 0, 0, 0, 0, 0
 };
 
-const uint8_t m_mnet[25] = {1, 0, 0, 0, 1,
-	     					1, 1, 0, 1, 1,
-	     					1, 0, 1, 0, 1,
-	     					1, 0, 0, 0, 1,
-	     					1, 0, 0, 0, 1
 
-};
-
-const uint_t s_mnet[25] = {0, 1, 1, 1, 0,
-						   1, 0, 0, 0, 0,
-						   0, 1, 1, 0, 0,
-						   0, 0, 0, 1, 0,
-						   0, 1, 1, 1, 0,
-
-};
 
 
 const MicroBitImage Full(5, 5, full);
@@ -146,8 +132,7 @@ const MicroBitImage Scissors(5, 5, scissors);
 const MicroBitImage Well(5, 5, well);
 const MicroBitImage Flash(5, 5, flash);
 const MicroBitImage Wave(7, 5, wave);
-const MicroBitImage M_Mnet(5, 5, m_mnet);
-const MicroBitImage S_Mnet(5, 5, s_mnet);
+
 
 // end images / copyright (C) by calliope
 
@@ -194,8 +179,27 @@ void showImage(MicroBitImage img) {
 }
 
 void showMnet() {
-	showImage(M_mnet);
-	showImage(S_mnet);
+	const uint8_t m_mnet[25] = {1, 0, 0, 0, 1,
+	     						1, 1, 0, 1, 1,
+	     						1, 0, 1, 0, 1,
+	     						1, 0, 0, 0, 1,
+	     						1, 0, 0, 0, 1
+
+	};
+
+	const uint_t s_mnet[25] = {0, 1, 1, 1, 0,
+						   	   1, 0, 0, 0, 0,
+						   	   0, 1, 1, 0, 0,
+						   	   0, 0, 0, 1, 0,
+						   	   0, 1, 1, 1, 0,
+
+	};
+
+	const MicroBitImage M_Mnet(5, 5, m_mnet);
+	const MicroBitImage S_Mnet(5, 5, s_mnet);
+
+	showImage(M_Mnet);
+	showImage(S_Mnet);
 }
 
 void mainGame() {
