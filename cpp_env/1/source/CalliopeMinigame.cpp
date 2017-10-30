@@ -187,7 +187,7 @@ void showMnet() {
 
 	};
 
-	const uint_t s_mnet[25] = {0, 1, 1, 1, 0,
+	const uint8_t s_mnet[25] = {0, 1, 1, 1, 0,
 						   	   1, 0, 0, 0, 0,
 						   	   0, 1, 1, 0, 0,
 						   	   0, 0, 0, 1, 0,
