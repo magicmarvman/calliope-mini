@@ -1,9 +1,12 @@
+#include "CalliopeSettings.h"
 #include "MicroBit.h"
 #include "nrf_delay.h"
 #include "nrf_gpio.h"
 
 
 MicroBit uBit;
+
+#ifdef CALLIOPE_DEMO_RGB
 
 int main() {
     uBit.init();
@@ -72,3 +75,5 @@ int main() {
     }
 
 } 
+
+#endif
